@@ -12,7 +12,7 @@ function TasksPage() {
 
         // which column the new task belongs to
 
-        
+
         let tbCol = document.querySelector('.' + inpStat.value)
 
         let taskCard = document.createElement('div')
@@ -30,7 +30,7 @@ function TasksPage() {
         taskCard.appendChild(taskTitle)
         taskCard.appendChild(taskOwner)
         taskCard.appendChild(taskDesc)
-        
+
         tbCol.appendChild(taskCard)
 
         inpTitle.value = ''
@@ -46,7 +46,7 @@ function TasksPage() {
                 <textarea id='inp-task-desc' placeholder="Task description"></textarea>
 
                 <div >
-                <label for="drop-status">Status</label>
+                    <label for="drop-status">Status</label>
                     <select name='drop-status' id="dropdown-status">
                         <option value='tb-todo'>To Do</option>
                         <option value='tb-ipr'>In Progress</option>
@@ -82,7 +82,7 @@ function TasksPage() {
             </form> */}
 
 
-            <div class='tasks-list'></div>
+            <div className='tasks-list'></div>
 
         </div>
     )
