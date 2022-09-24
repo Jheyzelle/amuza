@@ -38,7 +38,7 @@ function App() {
         </Routes>
       </HashRouter> */}
 
-      <p>&copy; 2022 Meep</p>
+      <p id='cr'>&copy; 2022 Meep</p>
     </div>
   );
 }
