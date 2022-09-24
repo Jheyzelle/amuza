@@ -5,15 +5,20 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.1s;
+
+  font-family: 'Calibri Light';
 }
 
 :root {
+
+  /* color scheme codes */
   --colorsc-1: #8693AB;
   --colorsc-2: #BDD4E7;
   --colorsc-3: #212227;
   --colorsc-4: #637074;
   --colorsc-5: #AAB9CF;
 }
+
 .section-flex {
   display: flex;
   width: 100%;
@@ -23,11 +28,26 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 textarea {
   resize: none;
+}
+
+button {
+  background: var(--colorsc-3);
+}
+
+button:hover {
+  background: var(--colorsc-1);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
 }
 /* ==================== Landing Page ==================== */
 
@@ -40,7 +60,7 @@ textarea {
   font-family: 'Bungee Spice', cursive;
 }
 
-#landing-action {
+.landing-action {
   border: 1px solid black;
 
   display: flex;
@@ -53,27 +73,29 @@ textarea {
   border-radius: 20px;
 }
 
-#landing-action #btn-show-new-proj-form,
-#landing-action #inp-code {
+.landing-action #btn-newprojform,
+.landing-action #inp-code {
   padding: 10px;
   font-size: 20px;
   width: 100%;
   border-radius: 10px;
 }
 
-#landing-action button {
-  margin-bottom: 20px;
+.landing-action button {
   background: var(--colorsc-3);
   border: none;
   color: white;
 }
 
-#landing-action button:hover {
-  background: var(--colorsc-1);
-  
+.landing-action #btn-newprojform {
+  margin: 0 0 20px 0;
 }
 
-#landing-action input {
+.landing-action button:hover {
+  background: var(--colorsc-1);
+}
+
+.landing-action input {
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -91,12 +113,10 @@ textarea {
 }
 
 #lbl-projtitle {
-font-size: 20px;
+  font-size: 20px;
 }
 
-#proj-dates {
-
-}
+#proj-dates {}
 
 
 #btn-add-mmbr {
@@ -108,6 +128,11 @@ font-size: 20px;
 
 .proj-form-hidden {
   display: none;
+}
+
+.landing-action .oks {
+  padding: 10px;
+  border-radius: 10px;
 }
 /* ==================== ^^^ Landing Page ^^^ ==================== */
 /* ==================== Tasks Page ==================== */
@@ -182,3 +207,16 @@ font-size: 20px;
 }
 
 /* ==================== ^^^ Tasks Page ^^^ ==================== */
+/* ==================== Navbar ==================== */
+.topnav {
+  
+}
+/* ==================== ^^^ Navbar ^^^ ==================== *//* ==================== Dashboard ==================== */
+.content {
+  background: var(--colorsc-5);
+}
+
+.db-clock .time {
+  font-size: 5em;
+}
+/* ==================== ^^^ Dashboard ^^^ ==================== */

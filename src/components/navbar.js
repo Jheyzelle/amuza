@@ -4,9 +4,18 @@ import TasksPage from "./taskspage";
 function Navbar() {
 
     return (
-        <>
-            <Link></Link>
-        </>
+        <div className="topnav">
+            
+            <h1>Site logo</h1>
+            <div>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Tasks</li>
+                    <li>Clock</li>
+                    <li>Messages</li>
+                </ul>
+            </div>
+        </div>
     )
 }
 

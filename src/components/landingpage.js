@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import TasksPage from "./taskspage";
 function LandingPage() {
 
+    let visibleJoinRoom = false;
+    let visibleNewProj = false;
 
     function createNewProj() {
 
@@ -29,35 +31,50 @@ function LandingPage() {
 
     }
 
-    function showBtnEnterRoom() {
-        let btnEnterRoom = document.createElement('button')
-        btnEnterRoom.style.display = 'block'
+    function showBtnJoinRoom() {
+        if (!visibleJoinRoom) {
+
+            // create join room button
+            let btnJoinRoom = document.createElement('button')
+
+            btnJoinRoom.innerHTML = 'Join Room'
+            btnJoinRoom.setAttribute('id', 'btn-joinroom')
+            btnJoinRoom.classList.add('oks')
+            btnJoinRoom.addEventListener('click', joinRoom)
+
+            let landAct = document.querySelector('.landing-action')
+            landAct.appendChild(btnJoinRoom)
+
+            visibleJoinRoom = true
+        }
     }
 
-    function enterRoom() {
+    function joinRoom() {
 
+        // TODO: Validate ROOM CODE
+        window.location.assign("/dashboard")
     }
+
     return (
         <div className="section-flex section-landingpage">
             <h1 className="landing-title">MEEP</h1>
 
-            {<Link to="/taskspage">HEre</Link>}
-            <div id="landing-action">
+            <div className="landing-action">
 
                 {/* new project form */}
                 <div className="new-proj-form proj-form-hidden">
 
-                    <label id='lbl-projtitle' for="newproj-title">Project Title</label>
+                    <label id='lbl-projtitle' htmlFor="newproj-title">Project Title</label>
                     <input type="text" id="newproj-title" name="newproj-title" />
 
-                    <label id='lbl-projdesc' for="newproj-desc">Description</label>
+                    <label id='lbl-projdesc' htmlFor="newproj-desc">Description</label>
                     <textarea type="text" id="newproj-desc" name="newproj-desc" />
 
                     <div className="proj-dates">
-                        <label for="newproj-desc">Start</label>
+                        <label htmlFor="proj-date-start">Start</label>
                         <input type="date" name="proj-date-start" id="proj-date-start" ></input>
 
-                        <label for="newproj-desc">End</label>
+                        <label htmlFor="proj-date-end">End</label>
                         <input type="date" name="proj-date-end" id="proj-date-end" ></input>
                     </div>
 
@@ -72,11 +89,13 @@ function LandingPage() {
                 </div>
                 {/* ^^^ new project form ^^^ */}
 
-                <button id="btn-show-new-proj-form" onClick={newProjForm} >Create new project</button>
+                <button id="btn-newprojform" onClick={newProjForm} >Create new project</button>
 
                 Have a room code?
-                <input id='inp-code' onClick={showBtnEnterRoom} />
+                <input id='inp-code' onClick={showBtnJoinRoom} />
                 
+
+            
             </div>
 
         </div>

@@ -46,13 +46,13 @@ function TasksPage() {
                 <textarea id='inp-task-desc' placeholder="Task description"></textarea>
 
                 <div >
-                    <label for="drop-status">Status</label>
+                    <label htmlFor="drop-status">Status</label>
                     <select name='drop-status' id="dropdown-status">
                         <option value='tb-todo'>To Do</option>
                         <option value='tb-ipr'>In Progress</option>
                         <option value='tb-done'>Done</option>
                     </select>
-                    <label for="drop-task-owner">Owner</label>
+                    <label htmlFor="drop-task-owner">Owner</label>
                     <select name='drop-task-owner' id="dropdown-task-owner">
                         <option value='Daniel'>Daniel</option>
                         <option value='Harsh'>Harsh</option>
