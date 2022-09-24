@@ -1,38 +1,87 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
   text-align: center;
+  
+}
+/* ==================== Landing Page ==================== */
+/* ==================== ^^^ Landing Page ^^^ ==================== */
+/* ==================== Tasks Page ==================== */
+
+
+.section-taskspage {
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.div-add-task {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#btn-addtask {
+
+  width: 200px;
+  background: black;
   color: white;
+  padding: 10px;
+  border-radius: 20px;
+
+  justify-self: right;
+  align-self: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+#inp-task-title, #inp-task-desc {
+  padding: 10px;
+  width: 500px;
+  font-family: 'Arial';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#inp-task-desc {
+  height: 150px;
+  resize: none;
 }
+
+.task-board {
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+  margin: 10px;
+}
+
+.tb-col {
+  border: 1px solid black;
+  min-width: 200px;
+  margin: 5px;
+}
+
+.task-card {
+  border: 1px solid black;
+
+  margin: 5px;
+  border-radius: 10px;
+
+  text-align: left;
+  padding: 10px;
+}
+/* ==================== ^^^ Tasks Page ^^^ ==================== */
