@@ -39,6 +39,7 @@ button {
 
 button:hover {
   background: var(--colorsc-1);
+  cursor: pointer;
 }
 
 h2 {
@@ -49,10 +50,15 @@ h2 {
 #cr {
   text-align: center;
 }
+
 /* ==================== Landing Page ==================== */
 
 .section-landingpage {
   height: 100vh;
+
+  /* background-image: url('assets/images/wallpbg.jpg'); */
+  background-size: contain;
+  flex-direction: row;
 }
 
 .landing-title {
@@ -71,6 +77,7 @@ h2 {
 
   padding: 30px 80px;
   border-radius: 20px;
+
 }
 
 .landing-action #btn-newprojform,
@@ -79,6 +86,9 @@ h2 {
   font-size: 20px;
   width: 100%;
   border-radius: 10px;
+
+  max-width: 250px;
+  text-align: center;
 }
 
 .landing-action button {
@@ -95,44 +105,120 @@ h2 {
   background: var(--colorsc-1);
 }
 
-.landing-action input {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
 .new-proj-form {
   display: flex;
   flex-direction: column;
   text-align: left;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px 0;
+
+  border: 1px solid black;
+  padding: 10px;
+  /* background: yellow; */
+}
+
+.new-proj-form label {
+  margin: 10px 0;
+  font-weight: 100;
+
+}
+
+.new-proj-form input,
+.new-proj-form textarea {
+  padding: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
 }
 
 #inp-mmbrname {
   width: 100%;
 }
 
-#lbl-projtitle {
-  font-size: 20px;
+ul li {
+  list-style-type: none;
+  margin: 5px 0;
 }
 
-#proj-dates {}
+.proj-dates {
+  margin: 20px 0;
+}
 
+.proj-dates input {
+  border: none;
 
-#btn-add-mmbr {
-  align-self: flex-end;
   width: 100px;
 }
 
+#btn-add-mmbr {
+  float: right;
+  padding: 0 10px;
+  margin: 10px 0;
 
+  color: inherit;
+  border-radius: 10px;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+#btn-add-mmbr:hover {
+  border-bottom: 2px solid black;
+}
 
 .proj-form-hidden {
   display: none;
 }
 
-.landing-action .oks {
+.landing-action .btn-joinroom {
   padding: 10px;
   border-radius: 10px;
+  margin: 10px 0;
+  margin-bottom: 0;
+}
+
+.section-landingpage section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+section.land-left {
+  width: 50%;
+  height: 100%;
+
+  position: fixed;
+  left: 0;
+}
+
+section.land-right {
+  width: 50%;
+
+  position: absolute;
+  right: 0;
+  /* background: var(--colorsc-5); */
+  border-top: 1px solid #00000040;
+  border-bottom: 1px solid #00000040;
+
+  min-height: 200px;
+}
+
+section.land-right h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+section.land-right p {
+  width: 70%;
+  text-align: left;
+
+}
+
+.new-proj-form ul {
+  padding: 10px;
 }
 
 /* ==================== ^^^ Landing Page ^^^ ==================== */
@@ -257,3 +343,191 @@ h2 {
 }
 
 /* ==================== ^^^ Dashboard ^^^ ==================== */
+
+/* ==================== TImer ==================== */
+.section-timer .progress-circle {
+  width: 300px;
+  height: 300px;
+  background: var(--colorsc-3);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-timer h2 {
+  font-size: 2em;
+}
+
+.progress-circle .circle-inner {
+  width: 285px;
+  height: 285px;
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.circle-inner .countdown {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.circle-inner .focus {
+  font-weight: bold;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.circle-inner .inner-text {
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  margin: 30px 0;
+}
+
+.progress-step .p-step {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--colorsc-2);
+  margin: 5px 30px;
+}
+
+.progress-step .p-step:nth-child(1) {
+
+  background-color: var(--colorsc-3);
+}
+
+.session-text {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 30px 0;
+}
+
+#btn-timer {
+  font-size: 2em;
+  color: white;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* ==================== ^^^ Timer ^^^ ==================== */
+/* ==================== Project Navigation ==================== */
+
+.projnav-header {
+  height: 120px;
+
+  width: 100%;
+
+  display: flex;
+}
+
+.fl-left,
+.fl-right {
+  display: flex;
+  align-items: center;
+}
+
+.fl-right {
+  margin-left: auto;
+  margin-right: 50px;
+  /* border: 1px solid red; */
+}
+
+.projmmbrs {
+  margin-left: 100px;
+}
+
+.header-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 30px 0 50px;
+  background-image: url('https://www.pennlive.com/resizer/UeXGnWaOE07lC4n_J5lJ0a1M-_M=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.pennlive.com/home/penn-media/width2048/img/entertainment_impact/photo/shutterstock-58364638jpg-6932548563f01558.jpg');
+
+  background-size: cover;
+}
+
+.topnav {
+  width: 100%;
+  background: var(--colorsc-4);
+  color: white;
+}
+
+.topnav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+.topnav ul li {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  position: relative;
+
+  height: 40px;
+  vertical-align: middle;
+  vertical-align:bottom;
+}
+
+.topnav ul li:hover {
+  background-color: var(--colorsc-1);
+}
+
+
+.activenavtab {
+  background: var(--colorsc-3);
+  transition: none;
+}
+
+.activenavtab::after {
+  content: '';
+  width: 100%;
+  height: 20px;
+  background: var(--colorsc-3);
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.activenavtab:hover,
+.activenavtab:hover::after {
+  background: var(--colorsc-1);
+}
+
+.lnk {
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  padding: 0;
+
+  vertical-align:bottom;
+}
+
+.lnk p {
+  width: 100%;
+  align-self: center;
+  margin: 0;
+
+}
+
+/* ==================== ^^^ Project Navigation ^^^ ==================== */

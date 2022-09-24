@@ -5,11 +5,14 @@ import { BrowserRouter as Router, Switch,  Routes, Route, Link } from 'react-rou
 
 import { HashRouter } from "react-router-dom";
 
+
 // ========== Webpage imports ==========
 import LandingPage from './components/landingpage';
 import Dashboard from './components/dashboard';
 import TasksPage from './components/taskspage';
-import Navbar from './components/navbar';
+import Timer from './components/timer';
+import ProjectNavigation from './components/projnavigation';
+import HeaderNav from './components/navbar';
 // ========== ^^^ Webpage imports ^^^ ==========
 function App() {
 
@@ -18,14 +21,16 @@ function App() {
     <div className="App">
       
       <span id='page-top'></span>
-      {/* <Navbar></Navbar> */}
+      
       
       {/* use router in dev */}
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage/>} />
+          <Route path="/projectinfo" element={<ProjectNavigation/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
       </Router>
 
@@ -33,8 +38,9 @@ function App() {
       {/* <HashRouter>
         <Routes>
           <Route path="/" element={<LandingPage/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/tasks" element={<TasksPage />} />
+          <Route exact path="/projmgmapp/projectinfo" element={<ProjectNavigation/>} />
+          <Route exact path="/projmgmapp/dashboard" element={<Dashboard/>} />
+          <Route exact path="/projmgmapp/tasks" element={<TasksPage />} />
         </Routes>
       </HashRouter> */}
 
