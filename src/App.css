@@ -527,7 +527,16 @@ section.land-right p {
   width: 100%;
   align-self: center;
   margin: 0;
-
 }
 
+.sec-projov  {
+
+}
+.hlbl {
+  font-weight: bold;
+}
+
+.sec-title {
+  font-size: 2em;
+}
 /* ==================== ^^^ Project Navigation ^^^ ==================== */

@@ -45,7 +45,7 @@ function TasksPage() {
                 <input id='inp-task-title' placeholder="Add new task" />
                 <textarea id='inp-task-desc' placeholder="Task description"></textarea>
 
-                <div >
+                <div>
                     <label htmlFor="drop-status">Status</label>
                     <select name='drop-status' id="dropdown-status">
                         <option value='tb-todo'>To Do</option>
