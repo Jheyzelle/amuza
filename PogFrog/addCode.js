@@ -10,7 +10,7 @@ const { Pool } = require("pg");
     // Connect to database
     const client = await pool.connect();
 
-    var sql = "INSERT INTO codes(room_code) VALUES (2323)"
+    var sql = "INSERT INTO codes(room_code) VALUES (1111)"
     client.query(sql, function (err, result) {
         if (err) throw err;
         console.log("1 record inserted into codes table");

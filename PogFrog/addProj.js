@@ -12,7 +12,7 @@ const { Pool } = require("pg");
     // Connect to database
     const client = await pool.connect();
 
-    var sql = "INSERT INTO project (proj_name, proj_desc, date_due) VALUES (Pog, Frog, null)"
+    var sql = "INSERT INTO project (proj_name, proj_desc, date_due) VALUES ('From', 'Pog', null)"
     client.query(sql, function (err, result) {
         if (err) throw err;
         console.log("1 record inserted into project table");
