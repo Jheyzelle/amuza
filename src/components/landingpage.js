@@ -44,13 +44,13 @@ function LandingPage() {
     function joinRoom() {
 
         // TODO: Validate ROOM CODE
-        window.location.assign("/timer")
+        window.location.assign("/projectinfo")
     }
 
     return (
         <div className="section-flex section-landingpage">
             <section className="land-left">
-                <h1 className="landing-title">MEEP</h1>
+                <h1 className="landing-title">Amuza</h1>
                 <div className="landing-action">
                     <CreateProjectForm></CreateProjectForm>
                     <button id="btn-newprojform" onClick={newProjForm} >Create new project</button>
@@ -60,9 +60,8 @@ function LandingPage() {
                 </div>
             </section>
             <section className="land-right">
-                <h2>What is Meep?</h2>
-                <p>Meep is a web app that aids development teams with task management tools and promotes self care and wellness to developers.</p>
-
+                <h2>What is Amuza?</h2>
+                <p>Amuza is a web app that aids development teams with task management tools and promotes self care and wellness to developers.</p>
             </section>
         </div>
     )

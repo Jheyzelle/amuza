@@ -49,7 +49,7 @@ function App() {
         </Routes>
 
 
-      <p id='cr'>&copy; 2022 Meep</p>
+      <p id='cr'>&copy; 2022 Amuza</p>
     </div>
   );
 }

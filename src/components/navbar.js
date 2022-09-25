@@ -27,7 +27,7 @@ function HeaderNav() {
                     </li>
 
                     <li>
-                        <Link to='/activities' className="lnk"><p>Activities</p></Link>
+                        <Link className="lnk"><p>Activities</p></Link>
                     </li>
 
                     <li >

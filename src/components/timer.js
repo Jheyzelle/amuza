@@ -73,7 +73,7 @@ function Timer() {
     return (
         <>
             <div className="section-timer section-flex">
-                <h2>Task : Something</h2>
+                <h2>Task 5 : Connect to db </h2>
                 <div className="progress-step">
                     <div className="p-step"></div>
                     <div className="p-step"></div>
@@ -96,7 +96,7 @@ function Timer() {
                     <p className="session-number">1 of 5</p>
                     <p>Session</p>
                 </div>
-                <button id="btn-timer" onClick={startTimer(0.10)}>Start</button>
+                <button id="btn-timer" onClick={startTimer(35)}>Start</button>
 
             </div>
         </>
