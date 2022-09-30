@@ -16,6 +16,7 @@ function LandingPage() {
     function newProjForm() {
         let projForm = document.querySelector('.new-proj-form')
         projForm.classList.remove('proj-form-hidden')
+        
 
     }
 
@@ -44,7 +45,7 @@ function LandingPage() {
     function joinRoom() {
 
         // TODO: Validate ROOM CODE
-        window.location.assign("/projectinfo")
+        window.location.assign("/amuza/projectinfo")
     }
 
     return (

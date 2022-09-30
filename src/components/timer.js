@@ -96,7 +96,7 @@ function Timer() {
                     <p className="session-number">1 of 5</p>
                     <p>Session</p>
                 </div>
-                <button id="btn-timer" onClick={startTimer(35)}>Start</button>
+                <button id="btn-timer" onClick={startTimer(0.2)}>Start</button>
 
             </div>
         </>

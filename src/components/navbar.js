@@ -20,7 +20,7 @@ function HeaderNav() {
             <nav className="topnav">
                 <ul>
                     <li>
-                        <Link to='/dashboard' className="lnk"><p>Dashboard</p></Link>
+                        <Link to='/amuza/dashboard' className="lnk"><p>Dashboard</p></Link>
                     </li>
                     <li className="activenavtab">
                         <Link to='/projectinfo' className="lnk"><p>Project Overview</p></Link>

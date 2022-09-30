@@ -41,9 +41,9 @@ function App() {
       {/* use hashrouter when building and deploying to github */}
  
         <Routes>
-          <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/projectinfo" element={<ProjectNavigation />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/amuza" element={<LandingPage />} />
+          <Route exact path="/amuza/projectinfo" element={<ProjectNavigation />} />
+          <Route exact path="/amuza/dashboard" element={<Dashboard />} />
           <Route exact path="/tasks" element={<TasksPage />} />
           <Route exact path="/timer" element={<Timer />} />
         </Routes>
