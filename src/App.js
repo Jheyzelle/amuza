@@ -17,37 +17,15 @@ function App() {
     <div className="App">
       <span id='page-top'></span>
 
-      {/* use router in dev */}
-      {/* <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage/>} />
-          <Route path="/projectinfo" element={<ProjectNavigation/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/tasks" element={<TasksPage />} />
-          <Route path="/timer" element={<Timer />} />
-        </Routes>
-      </Router> */}
-
-      {/* <Router>
-        <Routes>
-          <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/projectinfo" element={<ProjectNavigation />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route exact path="/tasks" element={<TasksPage />} />
-          <Route exact path="/timer" element={<Timer />} />
-        </Routes>
-      </Router> */}
-
       {/* use hashrouter when building and deploying to github */}
  
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/projectinfo" element={<ProjectNavigation />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route exact path="/tasks" element={<TasksPage />} />
-          <Route exact path="/timer" element={<Timer />} />
+          <Route path="/projectinfo" element={<ProjectNavigation />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
-
 
       <p id='cr'>&copy; 2022 Amuza</p>
     </div>
